@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Import Routes
-const authRoutes = require("./routes/auth");  
+const authRoutes = require("./routes/auth");
 const eventRoutes = require("./routes/events");
 const bookingRoutes = require("./routes/booking");
 const ticketsRoutes = require("./routes/ticket");
@@ -24,7 +24,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/tickets", require("./routes/ticket"));
-app.use("/api/checkin", require("./routes/checkin"));
+app.use("/api/checkin", require("./routes/checkIn"));
 app.use("/api/dashboard", require("./routes/dashboard"));
 app.use("/api/seats", require("./routes/seats"));
 
