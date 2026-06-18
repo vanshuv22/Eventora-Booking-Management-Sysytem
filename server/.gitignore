@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build Folders
+build/
+dist/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Coverage Reports
+coverage/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Uploads (optional)
+uploads/
+
+# React Build
+frontend/build/
+
+# Vite
+vite.svg
+
+# MongoDB
+data/
