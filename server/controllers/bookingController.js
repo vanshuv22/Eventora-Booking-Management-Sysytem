@@ -123,14 +123,31 @@ exports.getBookingsByEvent = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-exports.getPendingBooking = async (req, res) => {
-  console.log("Reqqqqqqq=====", req.user);
-  const bookings = await Booking.find({
-    // userId: req.user._id,
-    status: "pending",
-  }).populate("eventId");
+// exports.getPendingBooking = async (req, res) => {
+//   console.log("Reqqqqqqq=====", req.user);
+//   const bookings = await Booking.find({
+//     // userId: req.user._id,
+//     status: "pending",
+//   }).populate("eventId");
 
-  res.json(bookings);
+//   res.json(bookings);
+// };
+
+exports.getPendingBooking = async (req, res) => {
+  try {
+    const bookings = await Booking.find({
+      status: "pending",
+    }).populate("eventId");
+
+    res.json(bookings);
+  } catch (error) {
+    console.error("getPendingBooking Error:", error);
+
+    res.status(500).json({
+      success: false,
+      error: error.message,
+    });
+  }
 };
 
 exports.confirmBooking = async (req, res) => {

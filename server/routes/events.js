@@ -3,7 +3,7 @@ const router = express.Router();
 const {protect, admin} = require('../middleware/auth');
 const {getAllEvents, getEventById, createEvent, updateEvent, deleteEvent, getAdminEvents} = require('../controllers/eventController');
 
-router.get('/', getAllEvents);
+router.get("/", getAllEvents);
 
 // Admin → all events
 router.get("/admin/all", protect, admin, getAdminEvents);
