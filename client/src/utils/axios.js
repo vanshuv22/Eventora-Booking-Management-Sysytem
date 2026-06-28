@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://eventora-booking-management-system.onrender.com//api',
+  baseURL: 'https://eventora-booking-management-system.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
